@@ -11,9 +11,13 @@
 ### Install AWS-CLI
 
 apt-get update 
+
 apt install python-pip 
+
 pip install awscli 
+
 pip install boto
+
 
 
 * aws --version
