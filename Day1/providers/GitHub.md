@@ -7,24 +7,39 @@
 
 
 terraform {
+
   required_providers {
+  
     github = {
+    
       source = "integrations/github"
+      
       version = "4.12.2"
+      
     }
+    
   }
+  
 }
+
 
 provider "github" {
+
   token = "your_token"
+  
 }
+
 
 resource "github_repository" "repo1" {
+
   name        = "terra-repo1"
+  
 
   visibility  = "private"
+  
 
 }
+
 
 
 
