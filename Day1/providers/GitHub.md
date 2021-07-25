@@ -4,6 +4,8 @@
 ### GitHub Provider Terraform:
 ### https://registry.terraform.io/providers/integrations/github/latest/docs
 
+
+
 terraform {
   required_providers {
     github = {
@@ -23,6 +25,8 @@ resource "github_repository" "repo1" {
   visibility  = "private"
 
 }
+
+
 
 ### Initialize and Apply:
 * terraform init
