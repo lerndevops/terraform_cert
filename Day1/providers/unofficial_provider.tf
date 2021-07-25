@@ -12,12 +12,12 @@ provider "docker" {
 }
 
 # Pulls the image
-resource "docker_image" "ng" {
+resource "docker_image" "nginx" {
   name = "nginx:latest"
 }
 
 # Create a container
-resource "docker_container" "con1" {
+resource "docker_container" "foo" {
   image = docker_image.nginx.latest
-  name  = "cont1"
+  name  = "foo"
 }
