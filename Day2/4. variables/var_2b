@@ -1,0 +1,5 @@
+# create this file as variables.tf
+
+variable "client_addr" {
+  default = "10.1.0.0/16"
+}
