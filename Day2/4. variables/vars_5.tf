@@ -20,5 +20,6 @@ variable "instancetype" {
 
 
 ## For variable values run the following command
-## export TF_VAR_instancetype="t2.nano"
+## If Linux/Mac --> export TF_VAR_instancetype="t2.nano"
+## If windows --> setx TF_VAR_instancetype t2.large
 ## terraform plan   --> it should directly take value from ENV variable.
