@@ -1,9 +1,10 @@
 ## main.tf
-provider "aws" {
-  region     = "us-east-1"
-  access_key = "YOUR-KEY"
-  secret_key = "YOUR-KEY"
-}
+
+#provider "aws" {
+#   region     = "us-east-1"
+ # access_key = "YOUR-KEY"
+ # secret_key = "YOUR-KEY"
+#}
 
 resource "aws_iam_user" "name1" {
   name = var.username
@@ -71,7 +72,8 @@ variable "timeout" {
 
 elb_name="myelb"
 timeout="400"
-az=["us-west-1a","us-west-1b"]
+az=["us-east-1a","us-east-1b"]
+username="7897987"
 
 
 
