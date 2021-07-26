@@ -8,9 +8,9 @@
 
 ## Variable Definition Precedence
 
-### The above mechanisms for setting variables can be used together in any combination. If the same variable is assigned multiple values, Terraform uses the last value it finds, overriding any previous values. Note that the same variable cannot be assigned multiple values within a single source.
+####  Setting of variables can be used together in any combination. If the same variable is assigned multiple values, Terraform uses the last value it finds, overriding any previous values. Note that the same variable cannot be assigned multiple values within a single source.
 
-#### Terraform loads variables in the following order, with later sources taking precedence over earlier ones:
+##### Terraform loads variables in the following order, with later sources taking precedence over earlier ones:
 
 * Environment variables
 * The terraform.tfvars file, if present.
