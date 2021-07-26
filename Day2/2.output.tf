@@ -13,3 +13,4 @@ output "instance_ip_addr" {
 }
 
 #it creates aws instances and prints ips.
+#https://www.terraform.io/docs/language/values/outputs.html
