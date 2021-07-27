@@ -7,6 +7,6 @@
 
 # terraform console helps in testing functions
 
-# https://learn.hashicorp.com/tutorials/terraform/functions
+# Demo : https://learn.hashicorp.com/tutorials/terraform/functions
 
 
