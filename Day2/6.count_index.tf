@@ -16,4 +16,4 @@ tags = {
 
 # by default count assingns same name across
 # if we want diff names count.index helps
-# 
+# TASK : Create 3 IAM users using count, count.index options
