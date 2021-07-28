@@ -36,4 +36,4 @@ connection {
 ## The remote-exec provisioner invokes a script on a remote resource after it is created. This can be used to run a configuration management tool, bootstrap into a cluster, etc.
 # https://www.terraform.io/docs/language/resources/provisioners/remote-exec.html
 
-
+# TASK: create a new ubuntu instance, install nginx inside it, print public ip as output variable.
