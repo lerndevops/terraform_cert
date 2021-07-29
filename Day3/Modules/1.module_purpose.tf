@@ -43,3 +43,4 @@ resource "aws_instance" "aman-instances" {
 
 # What if 20 people want to create same resource ?? rather writing same resource multiple times.. define once use everywhere.
 
+# https://learn.hashicorp.com/tutorials/terraform/module?in=terraform/modules
