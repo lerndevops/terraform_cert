@@ -22,3 +22,4 @@ module "ec2module" {
   
   #terraform init
   # terraform plan
+# if you want to change instance type, that should be done at module level, if u update in test.tf, it doesnt work
