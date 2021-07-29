@@ -5,6 +5,7 @@
     
 #### terraform workspace show     -- to see current workspace
 #### terraform workspace new dev  -- to create new workspace called dev (it creates and switches)
+#### terraform workspace new prod  -- to create new workspace called prod (it creates and switches)
 #### terraform workspace select default -- to go to default workspace
 
 
