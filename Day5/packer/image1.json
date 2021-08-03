@@ -1,0 +1,36 @@
+# image1.json
+
+
+{
+    "variables": {
+        "aws_access_key": "access",
+        "aws_secret_key": "secret"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "region": "us-east-1",
+            "source_ami_filter": {
+                "filters": {
+                    "virtualization-type": "hvm",
+                    "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+                    "root-device-type": "ebs"
+                },
+                "owners": [
+                    "099720109477"
+                ],
+                "most_recent": true
+            },
+            "instance_type": "t2.micro",
+            "ssh_username": "ubuntu",
+            "ami_name": "devapp-q1-{{timestamp}}"
+        }
+    ]
+}
+
+# packer validate image1.json
+# packer build image1.json
+# It creates an ec2 tempararily and turns into an image and delete ec2.
+# Find the AMI created inder ami section.
