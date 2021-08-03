@@ -1,0 +1,58 @@
+## make sure the txt and sh files are in local folder of json file.
+
+
+{
+    "variables": {
+        "aws_access_key": "AKIAZ52P4QU6KUWG7H5J",
+        "aws_secret_key": "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"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "region": "us-east-1",
+            "source_ami_filter": {
+                "filters": {
+                    "virtualization-type": "hvm",
+                    "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+                    "root-device-type": "ebs"
+                },
+                "owners": [
+                    "099720109477"
+                ],
+                "most_recent": true
+            },
+            "instance_type": "t2.micro",
+            "ssh_username": "ubuntu",
+            "ami_name": "devapp-q1-{{timestamp}}"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "./test.txt",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "ls -a /home/ubuntu",
+                "cat /home/ubuntu/test.txt"
+            ]
+        },
+	{
+            "type": "file",
+            "source": "./setup-user.sh",
+            "destination": "~/setup-user.sh"
+        },
+        {
+            "type": "shell",
+	    "inline": ["sudo bash ~/setup-user.sh"]
+       }
+    ]
+}
+
+
+## packer validate image2.json
+## packer build image2.json
