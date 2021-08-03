@@ -9,6 +9,8 @@ sudo apt-get update && sudo apt-get install packer
 
 packer
 
+packer --version
+
 
 
 ## on Cent OS :
