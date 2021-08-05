@@ -11,7 +11,7 @@ terraform {
 
 resource "aws_iam_user" "user1" {
 
-  name = "remoteuser"
+  name = "raviuser"
   
   path = "/system/"
   
@@ -20,11 +20,16 @@ resource "aws_iam_user" "user1" {
 ### backend.hcl
 
 terraform {
+
   backend "remote" {
+  
     organization = "leaddevops-org"
+    
 
     workspaces {
+    
       name = "tester"
+      
     }
   }
 }
