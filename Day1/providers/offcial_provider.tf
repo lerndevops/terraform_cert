@@ -14,4 +14,5 @@ resource "aws_instance" "test1" {
 #version    = ">= 2.7"
 #version    = "<= 2.7"
 #version    = ">=2.10,<=2.20"
+#version    = "~= 2.7"
 
