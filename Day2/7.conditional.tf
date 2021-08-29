@@ -6,24 +6,24 @@ provider "aws" {
 #  secret_key = "YOUR-SECRET-KEY"
 }
 
-variable "dev" {}
+variable "envi" {}
 
 resource "aws_instance" "dev" {
    ami = "ami-0747bdcabd34c712a"
    instance_type = "t2.micro"
-   count = var.dev == true ? 3 : 0
+   count = var.envi == dev ? 3 : 0
 }
 
 resource "aws_instance" "prod" {
    ami = "ami-0747bdcabd34c712a"
    instance_type = "t2.large"
-   count = var.dev == false ? 1 : 0
+   count = var.envi == prod ? 1 : 0
 }
 
 #terraform.tfvars
 
-dev = true
-#dev = false
+envi = dev
+#envi = prod
 
 
 
