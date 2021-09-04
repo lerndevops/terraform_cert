@@ -10,7 +10,7 @@ resource "aws_instance" "test" {
   key_name = "terra"
 
 provisioner "file" {
-    source      = "/root/terraform-cert/setup-user.sh"
+    source      = "/root/terraform-cert/utils/setup-user.sh"
     destination = "/tmp/setup-user.sh"
 }
 
