@@ -15,7 +15,7 @@ resource "aws_instance" "test" {
 # update the instance type, terraform plan --> you will see updated plan 
 # terraform apply will corect the instancetype as per config
 
-# now try changing sf inbound rules and test.
+# now try changing sg inbound rules and test.
 
 
 # https://www.terraform.io/docs/language/state/index.html
