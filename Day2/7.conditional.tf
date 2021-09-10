@@ -8,21 +8,21 @@ provider "aws" {
 
 variable "envi" {}
 
-resource "aws_instance" "dev" {
+resource "aws_instance" "dev1" {
    ami = "ami-0747bdcabd34c712a"
    instance_type = "t2.micro"
-   count = var.envi == dev ? 3 : 0
+   count = var.envi == "dev" ? 3 : 0
 }
 
-resource "aws_instance" "prod" {
+resource "aws_instance" "prod1" {
    ami = "ami-0747bdcabd34c712a"
    instance_type = "t2.large"
-   count = var.envi == prod ? 1 : 0
+   count = var.envi == "prod" ? 1 : 0
 }
 
 #terraform.tfvars
 
-envi = dev
+envi = "dev"
 #envi = prod
 
 
