@@ -1,0 +1,17 @@
+git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster
+cd learn-terraform-provision-eks-cluster
+terraform init
+terraform plan
+terraform apply --auto-approve
+
+
+--------
+
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update ; clear
+sudo apt-get install -y kubectl
+
+aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
+kubectl get nodes
+kubectl get pods --all-namespaces
